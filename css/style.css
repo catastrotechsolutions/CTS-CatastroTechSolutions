@@ -215,3 +215,5 @@ button.cta{border:0;cursor:pointer;font-family:inherit}
 #zone-smf img{object-position:center 70%}
 footer{padding-block:24px 32px}
 footer p:first-child{font-size:10px;line-height:1.5;color:var(--steel);letter-spacing:0}
+footer p:first-child{font-size:9px;line-height:1.4;color:#b9bcbe;max-width:none}
+footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
