@@ -31,6 +31,8 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
 .logo img{display:block;height:30px;width:auto;align-self:flex-start}
 .logo span{font-family:var(--f-mono);font-size:9px;letter-spacing:.22em;margin-top:4px;color:var(--ink-soft)}
+.logo span{line-height:1.5}
+.logo small{font-size:inherit;letter-spacing:.5em}
 nav{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
 nav a{text-decoration:none;font-size:14px;font-weight:500}
 nav a:hover{color:var(--signal)}
