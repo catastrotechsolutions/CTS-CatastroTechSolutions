@@ -66,6 +66,9 @@ section{padding-block:clamp(64px,9vw,120px)}
 .letter-en{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:15px;line-height:1.7}
 .letter-en p{margin:0 0 12px}
 .letter-en .opening-en{font-family:var(--f-display);font-size:20px;color:var(--ink);letter-spacing:-.01em;margin-bottom:16px}
+.letter-ko{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:15px;line-height:1.7}
+.letter-ko p{margin:0 0 12px}
+.letter-ko .opening-ko{font-size:20px;font-weight:900;color:var(--ink);letter-spacing:-.03em;margin-bottom:16px}
 .todo-light{color:var(--steel);font-family:var(--f-mono);font-size:13px;border:1px dashed var(--steel);padding:12px 14px}
 @media (max-width:760px){.greeting .grid{grid-template-columns:1fr}.portrait{position:static;max-width:340px}}
 /* company */
@@ -265,7 +268,7 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .model3d model-viewer{display:block;width:100%;height:clamp(320px,56vw,620px);background:#fff;--poster-color:#fff}
 .model3d figcaption{font-family:var(--f-mono);font-size:11px;color:var(--steel);padding:8px 12px;border-top:1px solid var(--rule);background:var(--paper)}
 
-.event-next{display:grid;gap:8px;justify-items:start;margin:8px 0 72px;padding:clamp(28px,5vw,56px) clamp(22px,4vw,48px);background:var(--ink);color:var(--paper);text-decoration:none}
+.event-next{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center;margin:8px 0 72px;padding:clamp(20px,3vw,32px);background:var(--ink);color:var(--paper);text-decoration:none}
 .event-next .mono{color:var(--signal)}
 .event-next b{font-size:clamp(26px,3.6vw,44px);font-weight:900;letter-spacing:-.03em;line-height:1.2}
 .event-next .event-en{font-family:var(--f-mono);font-size:12px;color:var(--steel)}
@@ -275,3 +278,6 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .event-info dd{margin:0}
 .event-next .go{margin-top:14px;font-size:14px;color:var(--paper);border-bottom:1px solid var(--signal)}
 .event-next:hover .go{color:var(--signal)}
+.event-next img{width:100%;height:auto;display:block}
+.event-body{display:grid;gap:8px;justify-items:start}
+@media (max-width:760px){.event-next{grid-template-columns:1fr}.event-next img{max-width:360px}}
