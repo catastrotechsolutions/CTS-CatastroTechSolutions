@@ -213,3 +213,5 @@ button.cta{border:0;cursor:pointer;font-family:inherit}
 @media (min-width:861px){.prod:nth-of-type(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
 .zone img{aspect-ratio:4/3;object-fit:cover}
 #zone-smf img{object-position:center 70%}
+footer{padding-block:24px 32px}
+footer p:first-child{font-size:10px;line-height:1.5;color:var(--steel);letter-spacing:0}
