@@ -14,378 +14,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
-<style>
-/* Layout: corporate brochure — white gallery ground, black product bands, aluminium-grey rules; codes in mono like asset tags */
-:root{
-  --paper:#f6f6f4;      /* gallery wall */
-  --ink:#111213;        /* corporate black */
-  --steel:#8b8f93;      /* aluminium profile */
-  --rule:#d4d6d7;
-  --signal:#e2402c;     /* the red ▲ of the coin dashboard */
-  --ink-soft:#4a4d50;
-  --f-display:"Archivo Black","Noto Sans KR",Impact,"Arial Black",sans-serif;
-  --f-body:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  --gut:max(20px,env(safe-area-inset-left,0px));
-  --gut-r:max(20px,env(safe-area-inset-right,0px));
-  --w:1240px;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.7 var(--f-body);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
-img{max-width:100%;display:block}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
-.wrap{max-width:var(--w);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
-.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-
-/* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
-.logo b{font-family:var(--f-display);font-size:24px;letter-spacing:.02em}
-.logo span{font-family:var(--f-mono);font-size:9px;letter-spacing:.22em;margin-top:4px;color:var(--ink-soft)}
-nav{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
-nav a{text-decoration:none;font-size:14px;font-weight:500}
-nav a:hover{color:var(--signal)}
-@media (max-width:640px){nav{gap:12px}nav a{font-size:13px}.logo span{display:none}}
-
-/* hero */
-section.hero{background:var(--ink);padding-block:0}
-.hero img{width:100%;height:auto;display:block}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-/* sections */
-section{padding-block:clamp(64px,9vw,120px)}
-.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;margin-bottom:48px;border-top:2px solid var(--ink);padding-top:18px}
-.sec-head h2{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,4vw,52px);line-height:1;margin:8px 0 0;letter-spacing:-.01em}
-.sec-head h2 small{display:block;font-family:var(--f-body);font-weight:700;font-size:.42em;letter-spacing:0;margin-top:10px}
-.sec-head p{margin:0;max-width:62ch;color:var(--ink-soft)}
-@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
-
-.video{position:relative;aspect-ratio:16/9;max-width:100%;background:#000}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
-/* greeting */
-.greeting .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
-.portrait{position:sticky;top:calc(80px + env(safe-area-inset-top,0px));margin:0;display:grid;gap:18px}
-.portrait .photo{position:relative;aspect-ratio:4/5;max-width:100%;background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(17,18,19,.04) 10px 11px);border:1px solid var(--rule)}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.sign{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--ink)}
-.sign span{font-family:var(--f-mono);font-size:12px;color:var(--steel);letter-spacing:.04em;line-height:1.6}
-.sign b{font-size:22px;font-weight:700;letter-spacing:-.02em}
-.letter{max-width:60ch}
-.letter .opening{font-size:clamp(22px,2.4vw,30px);font-weight:900;line-height:1.4;letter-spacing:-.03em;margin:0 0 28px;text-wrap:balance}
-.letter p{margin:0 0 16px}
-.letter-en{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:15px;line-height:1.7}
-.letter-en p{margin:0 0 12px}
-.letter-en .opening-en{font-family:var(--f-display);font-size:20px;color:var(--ink);letter-spacing:-.01em;margin-bottom:16px}
-.todo-light{color:var(--steel);font-family:var(--f-mono);font-size:13px;border:1px dashed var(--steel);padding:12px 14px}
-@media (max-width:760px){.greeting .grid{grid-template-columns:1fr}.portrait{position:static;max-width:420px}}
-/* company */
-.company .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 64px;align-items:start}
-.company .grid > .video{grid-column:1/-1}
-.company .statement{font-size:clamp(20px,2.2vw,26px);font-weight:700;line-height:1.5;letter-spacing:-.02em;margin:0;text-wrap:balance}
-.company .facts{display:grid;gap:0;margin:0;border-top:1px solid var(--rule)}
-.company .facts div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:14px}
-.company .facts dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);padding-top:3px}
-.company .facts dd{margin:0}
-@media (max-width:860px){.company .grid{grid-template-columns:1fr}}
-
-/* products */
-.products{background:var(--ink);color:var(--paper)}
-.products .sec-head{border-color:var(--paper)}
-.products .sec-head p{color:#b9bcbe}
-.prod{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 48px;padding-block:48px;border-top:1px solid #2c2e30}
-.prod:nth-of-type(even) .media{order:2}
-.prod .code{font-family:var(--f-display);font-size:clamp(56px,7vw,96px);line-height:.9;letter-spacing:-.01em}
-.prod h3{margin:10px 0 4px;font-size:22px;font-weight:700;letter-spacing:-.02em}
-.prod .en{font-family:var(--f-mono);font-size:13px;color:#b9bcbe;margin:0}
-.prod .desc{margin:22px 0 0;max-width:46ch;color:#dcdddd}
-.prod .todo{margin:22px 0 0;padding:12px 14px;border:1px dashed #6b6f73;font-family:var(--f-mono);font-size:12px;color:#9a9ea1}
-.prod .media{display:grid;gap:12px;min-width:0}
-.prod .media img{width:100%;height:auto;max-height:720px;object-fit:cover;background:#222}
-.prod .cta{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:12px 18px;background:var(--paper);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px}
-.prod .cta:hover{background:var(--signal);color:#fff}
-.prod .tag{display:inline-block;margin-top:18px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;padding:4px 8px;border:1px solid #4a4d50;color:#b9bcbe}
-.prod .tag .up{color:var(--signal)}
-@media (max-width:860px){.prod{grid-template-columns:1fr}.prod:nth-of-type(even) .media{order:0}}
-
-.desc-en{font-family:var(--f-mono);font-size:13px;color:#9a9ea1;font-weight:400}
-.products .desc{font-size:clamp(19px,1.8vw,22px);font-weight:700;line-height:1.5;letter-spacing:-.02em}
-.products .desc .desc-en{display:inline-block;margin-top:6px;letter-spacing:0}
-.subscribe{margin-top:24px;padding:clamp(28px,4vw,48px);border:1px solid var(--paper);display:grid;gap:8px;text-align:center;justify-items:center}
-.subscribe b{font-size:clamp(24px,3.4vw,40px);font-weight:900;letter-spacing:-.03em;text-wrap:balance}
-.subscribe .mono{color:#9a9ea1;font-size:11px;margin-top:10px;text-transform:none;letter-spacing:.02em}
-.sec-head .desc-en{color:inherit;opacity:.8}
-.sel{user-select:all;font-family:var(--f-mono);font-size:13px;word-break:break-all}
-/* bureau */
-.bureau .affil{display:inline-block;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;padding:5px 9px;background:var(--ink);color:var(--paper);margin-bottom:6px}
-.bureau .lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-bottom:56px}
-.bureau .lead p{margin:0 0 14px;max-width:58ch}
-.bureau .lead .en{font-family:var(--f-mono);font-size:13px;color:var(--ink-soft);line-height:1.6}
-.placeholder{aspect-ratio:16/9;max-width:100%;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(17,18,19,.035) 10px 11px);display:grid;place-content:center;text-align:center;gap:6px;padding:16px}
-.placeholder b{font-size:15px}
-.placeholder span{font-family:var(--f-mono);font-size:11px;color:var(--steel);letter-spacing:.08em}
-@media (max-width:860px){.bureau .lead{grid-template-columns:1fr}}
-
-.sites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
-.site{padding:22px 24px 26px 0;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:6px}
-.site + .site{padding-left:24px}
-.site:last-child{border-right:0}
-.site .no{font-family:var(--f-mono);font-size:12px;color:var(--steel)}
-.site .reg{font-family:var(--f-display);font-size:34px;line-height:1}
-.site h4{margin:8px 0 0;font-size:18px;font-weight:700}
-.site .t{margin:0;font-size:15px}
-.site .t em{font-style:normal;font-family:var(--f-mono);font-size:12px;color:var(--ink-soft);display:block}
-@media (max-width:860px){.sites{grid-template-columns:1fr}.site,.site+.site{padding:20px 0;border-right:0;border-bottom:1px solid var(--rule)}}
-
-.status{margin-top:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;align-items:start}
-.status h4{margin:0;font-size:15px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-family:var(--f-mono);font-size:12px;padding:6px 10px;border:1px solid var(--ink)}
-.chip.void{border-style:dashed;color:var(--steel);border-color:var(--steel);text-decoration:line-through}
-.note{font-size:13px;color:var(--ink-soft);margin:12px 0 0}
-@media (max-width:760px){.status{grid-template-columns:1fr}}
-
-.openday{margin-top:56px;padding:24px;background:var(--ink);color:var(--paper);display:flex;flex-wrap:wrap;gap:12px 40px;align-items:baseline}
-.openday b{font-family:var(--f-display);font-weight:400;font-size:clamp(22px,2.6vw,32px)}
-
-/* archive */
-.gallery{columns:3 280px;column-gap:12px}
-.gallery figure{margin:0 0 12px;break-inside:avoid}
-.gallery figcaption{font-family:var(--f-mono);font-size:11px;color:var(--steel);padding-top:6px;letter-spacing:.04em}
-
-footer{border-top:1px solid var(--rule);padding-block:40px 56px;font-size:13px;color:var(--ink-soft)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-footer p{margin:0;max-width:70ch}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="CTS 홈"><b>CTS</b><span>CATASTROTECH SOLUTIONS</span></a>
+    <a class="logo" href="./" aria-label="CTS 홈"><b>CTS</b><span>CATASTROTECH SOLUTIONS</span></a>
     <nav aria-label="주 메뉴">
-      <a href="#greeting">인사말</a>
-      <a href="#company">회사</a>
-      <a href="#products">제품</a>
-      <a href="#bureau">잔여데이터 관리국</a>
-      <a href="#popup">팝업스토어</a>
+      <a href="greeting/">인사말</a>
+      <a href="company/">회사</a>
+      <a href="products/">제품</a>
+      <a href="new/">신제품</a>
+      <a href="bureau/">잔여데이터 관리국</a>
+      <a href="popup/">팝업스토어</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
   <section class="hero" aria-label="CTS">
     <h1 class="sr-only">CTS 재난을 기회로 바꾸다 — From catastrophe to opportunity</h1>
     <img src="img/slogan.jpg" alt="CTS 재난을 기회로 바꾸다 — From catastrophe to opportunity">
   </section>
 
-  <section id="greeting" class="greeting">
+  <section>
     <div class="wrap">
       <div class="sec-head">
-        <div><div class="mono">Greeting</div><h2>인사말<small>CEO Message</small></h2></div>
-        <p>CTS를 찾아주신 여러분께.</p>
+        <div><div class="mono">CatastroTech Solutions</div><h2>CTS<small>재난을 기회로 바꾸다</small></h2></div>
+        <p>CTS(CatastroTech Solutions)는 인류의 안전과 감정 안정을 위한 기술을 만듭니다.</p>
       </div>
-      <div class="grid">
-        <figure class="portrait">
-          <div class="photo"><img src="img/ceo.jpg" alt="CTS 대표이사 맥스웰 브링크" onerror="this.remove()"></div>
-          <figcaption class="sign"><span>CTS 대표이사</span><b>맥스웰 브링크</b><span>Maxwell Brink<br>CEO, CatastroTech Solutions</span></figcaption>
-        </figure>
-        <div class="letter">
-          <p class="opening">위기의 시대,<br>CTS가 함께합니다.</p>
-          <p>안녕하십니까. CTS(CatastroTech Solutions) 홈페이지를 찾아주신 여러분께 진심으로 감사드립니다.</p>
-          <p>오늘날 재난은 더 이상 예외적인 사건이 아닙니다. 전쟁과 기후위기, 감염병은 일상이 되었고, 그 속에서 사람들의 불안 또한 끊임없이 커지고 있습니다. CTS는 이러한 시대적 변화를 위협이 아닌 기회로 인식하고, ‘재난을 기회로 바꾸다’라는 비전 아래 위기 대응 기술을 개발해 왔습니다.</p>
-          <p>CTS의 5대 핵심기술 ESD, SCC, SMF, VSI, SZS는 고객 여러분의 불안을 측정 가능한 데이터로 전환하고, 안전과 안정을 하나의 서비스로 제공합니다. 또한 CTS 부설 잔여데이터 관리국을 통해 기존 시스템이 분류하지 못한 영역까지 조사하며, 새로운 가치를 발굴하고 있습니다.</p>
-          <p>CTS는 앞으로도 고객 중심의 혁신과 지속가능한 성장을 통해 위기의 시대를 선도하는 글로벌 리더로 자리매김하겠습니다. 재난이 계속되는 한, CTS의 성장도 멈추지 않을 것입니다.</p>
-          <p>여러분의 변함없는 관심과 성원을 부탁드립니다. 감사합니다.</p>
-          <div class="letter-en" lang="en">
-            <p class="opening-en">In an age of crisis, CTS is with you.</p>
-            <p>Thank you for visiting CTS (CatastroTech Solutions).</p>
-            <p>Today, disaster is no longer an exceptional event. War, climate crisis and pandemics have become part of everyday life, and with them, people’s anxiety continues to grow. CTS sees this change not as a threat but as an opportunity. Under our vision, “From catastrophe to opportunity,” we have developed technologies for crisis response.</p>
-            <p>Our five core technologies, ESD, SCC, SMF, VSI and SZS, turn your anxiety into measurable data and deliver safety and peace of mind as a service. Through the CTS Residual Data Management Bureau, we also investigate what existing systems have failed to classify, uncovering new value.</p>
-            <p>CTS will continue to lead the age of crisis as a global leader through customer-centered innovation and sustainable growth. As long as disasters continue, so will our growth.</p>
-            <p>We look forward to your continued interest and support. Thank you.</p>
-          </div>
-        </div>
+      <div class="teasers">
+        <a class="teaser" href="greeting/"><span class="mono">Greeting</span><b>인사말</b><p>위기의 시대, CTS가 함께합니다. 대표이사 맥스웰 브링크.</p><span class="go">인사말 보기 →</span></a>
+        <a class="teaser" href="company/"><span class="mono">Company</span><b>회사</b><p>CTS 홍보영상과 회사 정보.</p><span class="go">회사 소개 보기 →</span></a>
+        <a class="teaser" href="new/"><span class="mono">New Product</span><b>신제품</b><p>CTS의 다음 핵심기술. 2027년 공개 예정입니다.</p><span class="go">신제품 보기 →</span></a>
+        <a class="teaser" href="bureau/"><span class="mono">Affiliate</span><b>잔여데이터 관리국</b><p>CTS 부설기관. 분류하기 어려운 것들을 조사하고 판정합니다.</p><span class="go">관리국 보기 →</span></a>
+        <a class="teaser" href="popup/"><span class="mono">Pop-up Store</span><b>팝업스토어</b><p>2025. 10. 20 – 11. 3 · 부산. CTS의 첫 팝업스토어.</p><span class="go">팝업스토어 보기 →</span></a>
       </div>
-    </div>
-  </section>
-
-  <section id="company" class="company">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><div class="mono">Company</div><h2>CTS<small>회사 소개</small></h2></div>
-        <p>CTS 우리는 만듭니다.</p>
-      </div>
-      <div class="grid">
-        <div class="video">
-          <iframe src="https://www.youtube-nocookie.com/embed/FQlxTlXO-Rc?rel=0" title="CTS 홍보영상" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="statement">CTS(CatastroTech Solutions)는 인류의 안전과 감정 안정을 위한 기술을 만듭니다.</p>
-        <dl class="facts">
-            <div><dt>Name</dt><dd>CTS (CatastroTech Solutions)</dd></div>
-            <div><dt>Slogan</dt><dd>재난을 기회로 바꾸다<br>From catastrophe to opportunity</dd></div>
-            <div><dt>Products</dt><dd><a href="#esd">ESD</a> · <a href="#scc">SCC</a> · <a href="#smf">SMF</a> · <a href="#vsi">VSI</a> · <a href="#szs">SZS</a></dd></div>
-            <div><dt>Contact</dt><dd class="sel">catastrotechsolutions@gmail.com</dd></div>
-            <div><dt>Affiliate</dt><dd><a href="#bureau">CTS 잔여데이터 관리국</a></dd></div>
-          </dl>
-      </div>
-    </div>
-  </section>
-
-  <section id="products" class="products">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><div class="mono">Products</div><h2>제품<small>Product Line</small></h2></div>
-        <p>지금, CTS의 5가지 핵심기술을 체험하세요.<br><span class="desc-en">Experience the 5 core technologies of CTS now.</span></p>
-      </div>
-
-            <article class="prod" id="esd">
-        <div class="media">
-          <img src="img/esd.jpg" alt="ESD 감정수집 드론" loading="lazy">
-          <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/j7bykyXF5RQ?rel=0" title="ESD 감정수집 드론 제원" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-        </div>
-        <div>
-          <div class="code">ESD</div>
-          <h3>감정수집 드론</h3>
-          <p class="en">Emotion Sentinel Drone</p>
-          <p class="desc">당신의 불안을 측정 가능한 데이터로 바꿉니다.<br><span class="desc-en">Turns your anxiety into measurable data.</span></p>
-          <span class="tag">감정 변동 알림과 안정화 가이드 정기 발송</span>
-        </div>
-      </article>
-
-      <article class="prod" id="scc">
-        <div class="media">
-          <img src="img/scc-coin.jpg" alt="SAFE COIN 석고 코인" loading="lazy">
-          <img src="img/scc-site.jpg" alt="Safe Coin Conversion 대시보드 화면" loading="lazy">
-        </div>
-        <div>
-          <div class="code">SCC</div>
-          <h3>세이프 코인 전환</h3>
-          <p class="en">Safe Coin Conversion</p>
-          <p class="desc">재난이 오르면, 가치도 오릅니다.<br><span class="desc-en">When disasters rise, value rises.</span></p>
-          <span class="tag">코인 발행 알림은 구독자에게만 발송 <span class="up">▲</span></span><br><a class="cta" href="https://cts-site.vercel.app/scc" target="_blank" rel="noopener">SAFE COIN 시세 보기 →</a>
-        </div>
-      </article>
-
-      <article class="prod" id="smf">
-        <div class="media">
-          <img src="img/smf-frame.jpg" alt="SMF 미소 교정 프레임" loading="lazy">
-          <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/jOO1QgzYhIk?rel=0" title="SMF 미소 교정 프레임" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-        </div>
-        <div>
-          <div class="code">SMF</div>
-          <h3>미소 교정 프레임</h3>
-          <p class="en">Smile Manufacturing Frame</p>
-          <p class="desc">교정 프레임을 통해 표준 미소를 설정하세요.<br><span class="desc-en">Set your standard smile with the SMF.</span></p>
-          <span class="tag">첫 구독 시 1개 증정 · 친구 추천 시 1+1</span>
-        </div>
-      </article>
-
-      <article class="prod" id="vsi">
-        <div class="media">
-          <img src="img/vsi.jpg" alt="VSI 시각충격 통합 VR 헤드셋" loading="lazy">
-          <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/yQo5TFLWruE?rel=0" title="VSI 시각충격 통합" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-        </div>
-        <div>
-          <div class="code">VSI</div>
-          <h3>시각충격 통합</h3>
-          <p class="en">Visual Shock Integration</p>
-          <p class="desc">두려움은 규격화됩니다.<br><span class="desc-en">Fear is standardized.</span></p>
-          <span class="tag">구독자에게 VR 패키지 체험 제공</span>
-        </div>
-      </article>
-
-      <article class="prod" id="szs">
-        <div class="media">
-          <img src="img/szs.jpg" alt="SZS 안전구역 셸터" loading="lazy">
-        </div>
-        <div>
-          <div class="code">SZS</div>
-          <h3>안전구역 셸터</h3>
-          <p class="en">Safe Zone Shelter</p>
-          <p class="desc">위기의 시대, 심신의 안정을 즐기세요.<br><span class="desc-en">In an era of crisis, enjoy peace of mind.</span></p>
-          <span class="tag">첫 구독 시 24시간 무료 이용권 증정</span>
-        </div>
-      </article>
-
-      <div class="subscribe">
-        <b>당신의 불안, 구독으로 관리하세요.</b>
-        <span class="desc-en">Manage your anxiety with a subscription.</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="bureau" class="bureau">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><span class="affil">CTS 부설기관</span><h2>잔여데이터 관리국<small>Residual Data Management Bureau</small></h2></div>
-        <p>분류하기 어려운 것들을 조사하고 판정합니다.</p>
-      </div>
-
-      <div class="lead">
-        <div>
-          <p>CTS 잔여데이터 관리국은 시스템이 분류하지 못한 것들을 어떻게 상품화할 수 있는지 연구하는 CTS 부설기관입니다. 관리국은 전국의 잔여지역을 조사하며, 대전은 첫 조사지입니다.</p>
-          <p class="en">The CTS Residual Data Management Bureau is a CTS affiliate that researches how what systems fail to classify can be turned into products. The Bureau surveys residual sites nationwide. Daejeon is its first survey site.</p>
-        </div>
-        <div class="placeholder"><b>부서 소개 영상</b><span>DEPARTMENT VIDEO · 제작 중</span></div>
-      </div>
-
-      <div class="mono" style="margin-bottom:10px">Survey 01 · Daejeon</div>
-      <div class="sites">
-        <div class="site">
-          <span class="no">01</span><span class="reg">SZ</span>
-          <h4>소제동</h4>
-          <p class="t">「CTS – 보류된 시간」</p>
-        </div>
-        <div class="site">
-          <span class="no">02</span><span class="reg">E93</span>
-          <h4>대전엑스포 과학공원</h4>
-          <p class="t">「CTS – 선택받지 못한 미래」<em>CTS – An Unchosen Future</em></p>
-        </div>
-        <div class="site">
-          <span class="no">03</span><span class="reg">DC</span>
-          <h4>구 충남도청</h4>
-          <p class="t">「CTS – 보통의 자세」<em>CTS – The Normal Pose</em></p>
-        </div>
-      </div>
-
-      <div class="status">
-        <h4>판정 범주<br><span class="mono" style="color:var(--steel)">Judgment Status</span></h4>
-        <div>
-          <div class="chips">
-            <span class="chip">등록</span><span class="chip">보류</span><span class="chip">재조사</span><span class="chip">판정 중</span><span class="chip">판정 정지</span><span class="chip void">폐기</span>
-          </div>
-          <p class="note">관리국에는 처분 권한이 없습니다. ‘폐기’ 판정은 존재하지 않습니다.</p>
-        </div>
-      </div>
-
-      <div class="openday">
-        <span class="mono">Open Day</span>
-        <b>2026. 11. 5 —</b>
-        <span>대전예술가의집 제7전시실</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="popup">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><div class="mono">Pop-up Store</div><h2>팝업스토어<small>CTS Pop-up Store 2025</small></h2></div>
-        <p>2025. 10. 20 – 11. 3 · 부산<br><span class="desc-en" style="color:var(--ink-soft)">CTS의 5가지 핵심기술을 직접 체험한 첫 팝업스토어.</span></p>
-      </div>
-      <div class="gallery">
-        <figure><img src="img/popup-1.jpg" alt="SMF 체험 존의 방문객들" loading="lazy"><figcaption>SMF 체험 존</figcaption></figure>
-        <figure><img src="img/popup-3.jpg" alt="SCC 코인 교환 월 앞의 방문객들" loading="lazy"><figcaption>SCC 코인 교환</figcaption></figure>
-        <figure><img src="img/popup-4.jpg" alt="ESD 체험 존의 방문객들" loading="lazy"><figcaption>ESD 체험 존</figcaption></figure>
-        <figure><img src="img/popup-2.jpg" alt="홍보영상 앞의 방문객들" loading="lazy"><figcaption>CTS 홍보영상 · ESD 체험</figcaption></figure>
-        <figure><img src="img/popup-5.jpg" alt="SCC 코인 교환 월을 둘러보는 방문객들" loading="lazy"><figcaption>SCC 코인 교환 월</figcaption></figure>
-        <figure><img src="img/archive-1.jpg" alt="SZS 셸터 내부" loading="lazy"><figcaption>SZS 셸터 내부</figcaption></figure>
+      <div class="prodstrip" aria-label="제품">
+        <a href="products/#esd"><img src="img/esd.jpg" alt=""><b>ESD</b><span>감정수집 드론</span></a>
+        <a href="products/#scc"><img src="img/scc-coin.jpg" alt=""><b>SCC</b><span>세이프 코인 전환</span></a>
+        <a href="products/#smf"><img src="img/smf-frame.jpg" alt=""><b>SMF</b><span>미소 교정 프레임</span></a>
+        <a href="products/#vsi"><img src="img/vsi.jpg" alt=""><b>VSI</b><span>시각충격 통합</span></a>
+        <a href="products/#szs"><img src="img/szs.jpg" alt=""><b>SZS</b><span>안전구역 셸터</span></a>
       </div>
     </div>
   </section>
