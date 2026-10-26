@@ -28,11 +28,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-off
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
-.logo img{display:block;height:30px;width:auto;align-self:flex-start}
+.logo{display:flex;flex-direction:column;align-items:center;text-align:center;line-height:1;text-decoration:none}
+.logo img{display:block;height:30px;width:auto}
 .logo span{font-family:var(--f-mono);font-size:9px;letter-spacing:.22em;margin-top:4px;color:var(--ink-soft)}
-.logo span{line-height:1.5}
-.logo small{font-size:inherit;letter-spacing:.5em}
+.logo span{line-height:1.5;padding-left:.22em;white-space:nowrap}
+.logo small{font-size:inherit;letter-spacing:.47em;margin-right:-.25em}
 nav{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
 nav a{text-decoration:none;font-size:14px;font-weight:500}
 nav a:hover{color:var(--signal)}
@@ -283,3 +283,5 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .event-next img{width:100%;height:auto;display:block}
 .event-body{display:grid;gap:8px;justify-items:start}
 @media (max-width:760px){.event-next{grid-template-columns:1fr}.event-next img{max-width:360px}}
+
+.sec-head.wide{grid-template-columns:1fr;gap:16px}
