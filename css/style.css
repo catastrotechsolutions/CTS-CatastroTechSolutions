@@ -54,7 +54,7 @@ section{padding-block:clamp(64px,9vw,120px)}
 
 /* greeting */
 .greeting .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
-.portrait{position:sticky;top:calc(80px + env(safe-area-inset-top,0px));margin:0;display:grid;gap:18px}
+.portrait{position:sticky;top:calc(80px + env(safe-area-inset-top,0px));margin:0;display:grid;gap:18px;max-width:360px}
 .portrait .photo{position:relative;aspect-ratio:4/5;width:100%;max-width:360px;background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(17,18,19,.04) 10px 11px);border:1px solid var(--rule)}
 .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .sign{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--ink)}
