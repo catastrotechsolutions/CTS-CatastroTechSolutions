@@ -235,8 +235,9 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .org-unit b{font-size:15px;letter-spacing:-.02em}
 .org-unit .en{font-family:var(--f-mono);font-size:10px;color:var(--steel);letter-spacing:.04em}
 .org-unit ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:13px;color:var(--ink-soft)}
-.org-unit li::before{content:"– ";color:var(--steel)}
-.org-unit em{font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--signal)}
+.org-unit li{display:flex;align-items:baseline;gap:4px}
+.org-unit li::before{content:"–";color:var(--steel)}
+.org-unit em{margin-left:auto;padding-left:8px;font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--signal)}
 .org-unit.is-new{border-style:dashed}
 .org-affil{margin-top:28px;border:1px dashed var(--steel);padding:16px 20px;display:grid;gap:4px;position:relative}
 .org-affil::before{content:"";position:absolute;left:50%;top:-29px;height:28px;border-left:1px dashed var(--steel)}
