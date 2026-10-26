@@ -285,3 +285,4 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .event-body{display:grid;gap:8px;justify-items:start}
 @media (max-width:760px){.event-next{grid-template-columns:1fr}.event-next img{max-width:360px}}
 
+.org-unit .en em{margin:0;padding:0}
