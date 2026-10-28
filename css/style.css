@@ -375,3 +375,7 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-text ol.facts li{counter-increment:f;padding:10px 0 10px 2.2em;border-bottom:1px solid var(--rule);position:relative;color:var(--ink-soft)}
 .rsch-text ol.facts li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--f-mono);font-size:12px;color:var(--signal)}
 .rsch-text ol.facts li b{color:var(--ink)}
+.rsch-text .rsch-table.stages{margin:12px 0 14px;max-width:60ch}
+.rsch-table.stages td span{display:block;margin-top:3px;color:var(--ink-soft)}
+.rsch-table.stages td em{display:block;margin-top:4px;font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--steel);letter-spacing:.04em}
+.rsch-table.stages td b{color:var(--ink)}
