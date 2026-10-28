@@ -349,3 +349,19 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-docs .refs .mono{display:block;font-size:10px;color:var(--steel);margin-bottom:2px}
 @media (max-width:860px){.rsch-body{grid-template-columns:1fr}.rsch-meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.figs{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.fig{padding:10px}.rsch-head{gap:14px}}
+
+/* bureau: research galleries */
+.rsch-gallery{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rsch-gallery.cols2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rsch-gallery.cols4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rsch-gallery figure{margin:0;min-width:0}
+.rsch-gallery .wide{grid-column:1/-1}
+.rsch-gallery a{display:block;border:1px solid var(--rule);background:#fff}
+.rsch-gallery a:hover{border-color:var(--ink)}
+.rsch-gallery img{display:block;width:100%;height:auto}
+.rsch-gallery figcaption{font-family:var(--f-mono);font-size:11px;color:var(--steel);padding-top:6px;line-height:1.5}
+@media (max-width:860px){.rsch-gallery,.rsch-gallery.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.rsch-gallery.cols2{grid-template-columns:1fr}}
+.rsch-docs .source{margin:18px 0 0;padding:14px 16px;border:1px solid var(--ink);font-size:13px;line-height:1.7;color:var(--ink-soft)}
+.rsch-docs .source .mono{display:block;font-size:10px;color:var(--ink);margin-bottom:4px}
+.rsch-docs .source b{color:var(--ink)}
