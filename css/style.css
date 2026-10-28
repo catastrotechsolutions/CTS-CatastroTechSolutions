@@ -365,3 +365,8 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-docs .source{margin:18px 0 0;padding:14px 16px;border:1px solid var(--ink);font-size:13px;line-height:1.7;color:var(--ink-soft)}
 .rsch-docs .source .mono{display:block;font-size:10px;color:var(--ink);margin-bottom:4px}
 .rsch-docs .source b{color:var(--ink)}
+.rsch-gallery.doc{grid-template-columns:minmax(0,2fr) minmax(0,3fr);align-items:start;margin-top:14px}
+.rsch-gallery.doc .doc-text{font-size:14px;line-height:1.7;color:var(--ink-soft);max-width:48ch}
+.rsch-gallery.doc .doc-text .mono{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.rsch-gallery.doc .doc-text p{margin:0 0 12px}
+@media (max-width:600px){.rsch-gallery.doc{grid-template-columns:1fr}}
