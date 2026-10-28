@@ -370,3 +370,8 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-gallery.doc .doc-text .mono{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
 .rsch-gallery.doc .doc-text p{margin:0 0 12px}
 @media (max-width:600px){.rsch-gallery.doc{grid-template-columns:1fr}}
+.rsch-text .rsch-sub{font-size:14px;color:var(--ink-soft);line-height:1.7}
+.rsch-text ol.facts{list-style:none;padding:0;border-top:1px solid var(--ink);counter-reset:f}
+.rsch-text ol.facts li{counter-increment:f;padding:10px 0 10px 2.2em;border-bottom:1px solid var(--rule);position:relative;color:var(--ink-soft)}
+.rsch-text ol.facts li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--f-mono);font-size:12px;color:var(--signal)}
+.rsch-text ol.facts li b{color:var(--ink)}
