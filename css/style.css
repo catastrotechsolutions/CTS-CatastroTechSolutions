@@ -379,3 +379,9 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-table.stages td span{display:block;margin-top:3px;color:var(--ink-soft)}
 .rsch-table.stages td em{display:block;margin-top:4px;font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--steel);letter-spacing:.04em}
 .rsch-table.stages td b{color:var(--ink)}
+
+/* bureau: site photos (현장 사진) */
+.rsch-gallery.site{margin:0 0 28px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.rsch-gallery.site img{aspect-ratio:3/4;object-fit:cover}
+.rsch-gallery.site figcaption .note{display:block;color:var(--ink-soft)}
+@media (max-width:860px){.rsch-gallery.site{grid-template-columns:repeat(2,minmax(0,1fr))}}
