@@ -385,3 +385,6 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-gallery.site img{aspect-ratio:3/4;object-fit:cover}
 .rsch-gallery.site figcaption .note{display:block;color:var(--ink-soft)}
 @media (max-width:860px){.rsch-gallery.site{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* bureau: timeline row sources */
+.rsch-table td em.src{display:block;margin-top:3px;font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--steel);letter-spacing:.04em}
