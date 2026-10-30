@@ -115,6 +115,8 @@ section{padding-block:clamp(64px,9vw,120px)}
 .bureau .lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-bottom:56px}
 .bureau .lead p{margin:0 0 14px;max-width:58ch}
 .bureau .lead .en{font-family:var(--f-mono);font-size:13px;color:var(--ink-soft);line-height:1.6}
+.bureau .lead figure{margin:0}
+.bureau .lead figcaption{font-family:var(--f-mono);font-size:11px;color:var(--steel);padding-top:6px;line-height:1.5}
 .placeholder{aspect-ratio:16/9;max-width:100%;border:1px solid var(--rule);background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(17,18,19,.035) 10px 11px);display:grid;place-content:center;text-align:center;gap:6px;padding:16px}
 .placeholder b{font-size:15px}
 .placeholder span{font-family:var(--f-mono);font-size:11px;color:var(--steel);letter-spacing:.08em}
