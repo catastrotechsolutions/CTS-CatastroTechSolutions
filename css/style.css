@@ -388,3 +388,7 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 
 /* bureau: timeline row sources */
 .rsch-table td em.src{display:block;margin-top:3px;font-style:normal;font-family:var(--f-mono);font-size:10px;color:var(--steel);letter-spacing:.04em}
+
+/* bureau: 1989 report flow diagram (full-width doc) */
+.rsch-gallery.doc.flow{grid-template-columns:1fr;margin-top:32px}
+.rsch-gallery.doc.flow .doc-text{max-width:66ch}
