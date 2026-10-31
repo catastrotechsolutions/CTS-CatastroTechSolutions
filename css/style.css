@@ -396,13 +396,6 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-gallery.doc.flow .doc-text{max-width:66ch}
 
 /* bureau: hub links + sub pages */
-.rsch-links{display:grid;border-top:1px solid var(--ink);margin:0 0 64px}
-.rsch-links a{display:grid;grid-template-columns:3.4em minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--rule);text-decoration:none}
-.rsch-links .reg{font-family:var(--f-display);font-size:22px;line-height:1}
-.rsch-links b{font-size:16px}
-.rsch-links b em{display:block;font-style:normal;font-weight:400;font-size:13px;color:var(--ink-soft);margin-top:3px}
-.rsch-links .go{font-size:13px;font-weight:700;white-space:nowrap}
-.rsch-links a:hover .go,.rsch-links a:hover .reg{color:var(--signal)}
 .crumb{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .crumb .affil{margin-bottom:0}
 .crumb .mono{color:var(--steel);font-size:11px}
@@ -418,4 +411,4 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-pager .mono{color:var(--steel);font-size:11px}
 .rsch-pager b{font-size:16px}
 .rsch-pager a:hover b{color:var(--signal)}
-@media (max-width:480px){.rsch-links a{grid-template-columns:3em minmax(0,1fr)}.rsch-links .go{grid-column:2}.rsch-pager{grid-template-columns:1fr}.rsch-pager a.next{text-align:left;align-items:flex-start}}
+@media (max-width:480px){.rsch-pager{grid-template-columns:1fr}.rsch-pager a.next{text-align:left;align-items:flex-start}}
