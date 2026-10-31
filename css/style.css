@@ -423,3 +423,11 @@ nav .dropdown a{display:flex;gap:12px;align-items:baseline;padding:9px 16px;font
 nav .dropdown a .reg{font-family:var(--f-mono);font-size:11px;color:var(--steel);min-width:4.6em}
 nav .dropdown a:hover .reg{color:var(--signal)}
 @media (max-width:860px){nav .menu>a::after{content:""}nav .dropdown{display:none!important}}
+
+/* bureau hub: site card thumbnail */
+.site{display:grid;grid-template-columns:minmax(0,1fr) 96px;column-gap:16px;align-items:start}
+.site-text{display:flex;flex-direction:column;gap:6px}
+.site .thumb{display:block;border:1px solid var(--rule);background:#fff}
+.site .thumb:hover{border-color:var(--signal)}
+.site .thumb img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:860px){.site{grid-template-columns:minmax(0,1fr) 88px}}
