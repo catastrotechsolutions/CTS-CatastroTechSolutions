@@ -412,3 +412,14 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 .rsch-pager b{font-size:16px}
 .rsch-pager a:hover b{color:var(--signal)}
 @media (max-width:480px){.rsch-pager{grid-template-columns:1fr}.rsch-pager a.next{text-align:left;align-items:flex-start}}
+
+/* header: bureau dropdown (3 survey sites) */
+nav .menu{position:relative}
+nav .menu>a::after{content:" ▾";font-size:10px;color:var(--steel)}
+nav .dropdown{position:absolute;top:100%;right:0;min-width:250px;padding:8px 0;margin-top:10px;background:var(--paper);border:1px solid var(--rule);box-shadow:0 8px 24px rgba(17,18,19,.08);display:none;flex-direction:column;z-index:30}
+nav .dropdown::before{content:"";position:absolute;left:0;right:0;top:-11px;height:11px}
+nav .menu:hover .dropdown,nav .menu:focus-within .dropdown{display:flex}
+nav .dropdown a{display:flex;gap:12px;align-items:baseline;padding:9px 16px;font-size:13px;font-weight:500;white-space:nowrap}
+nav .dropdown a .reg{font-family:var(--f-mono);font-size:11px;color:var(--steel);min-width:4.6em}
+nav .dropdown a:hover .reg{color:var(--signal)}
+@media (max-width:860px){nav .menu>a::after{content:""}nav .dropdown{display:none!important}}
