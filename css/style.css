@@ -431,8 +431,9 @@ nav .menu>a::after{position:absolute;right:-12px;top:0}
   header .wrap{flex-wrap:wrap;gap:8px 16px}
   nav{flex:1 1 100%;justify-content:space-between;gap:8px 12px}
   nav .menu{flex:1 1 100%;display:flex;flex-direction:column;align-items:center;gap:6px}
-  nav .menu>a::after{content:""}
-  nav .dropdown,nav .menu:hover .dropdown,nav .menu:focus-within .dropdown{position:static;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 14px;min-width:0;padding:0;margin:0;background:none;border:0;box-shadow:none}
+  nav .menu.open>a::after{content:" ▴"}
+  nav .dropdown,nav .menu:hover .dropdown,nav .menu:focus-within .dropdown{position:static;display:none;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 14px;min-width:0;padding:0;margin:0;background:none;border:0;box-shadow:none}
+  nav .menu.open .dropdown{display:flex}
   nav .dropdown::before{display:none}
   nav .dropdown a{padding:2px 0;font-size:12px;gap:5px}
   nav .dropdown a .reg{min-width:0;font-size:10px}
