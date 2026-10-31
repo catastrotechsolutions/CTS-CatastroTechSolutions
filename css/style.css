@@ -393,6 +393,7 @@ footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
 
 /* bureau: 1989 report flow diagram (full-width doc) */
 .rsch-gallery.doc.flow{grid-template-columns:1fr;margin-top:32px}
+.rsch-gallery.doc.flow figure{max-width:900px}
 .rsch-gallery.doc.flow .doc-text{max-width:66ch}
 
 /* bureau: hub links + sub pages */
