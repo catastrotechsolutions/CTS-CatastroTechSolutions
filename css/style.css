@@ -473,3 +473,21 @@ nav .menu>a::after{position:absolute;right:-12px;top:0}
   nav{justify-content:space-between;gap:8px 12px}
   nav .menu>a{flex:1 1 100%;align-items:center}
 }
+
+/* bureau: scenario page tables */
+.rsch-page .intro.small{font-size:13px;color:var(--steel)}
+.tbl{overflow-x:auto;margin:14px 0 6px;-webkit-overflow-scrolling:touch}
+.tbl .rsch-table{margin-bottom:0}
+.rsch-table thead th{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);border-top:0;border-bottom:1px solid var(--ink);padding-bottom:6px;white-space:nowrap;width:auto}
+.rsch-table.spec th{width:7em;white-space:nowrap}
+.rsch-table.parts th{white-space:nowrap}
+.rsch-table.shots{min-width:720px;font-size:12.5px}
+.rsch-table.shots th{white-space:nowrap;width:1%}
+.rsch-table.shots td:nth-child(2){font-family:var(--f-mono);font-size:11px;color:var(--ink-soft);white-space:nowrap}
+.rsch-table.shots td:nth-child(4),.rsch-table.shots td:nth-child(5){font-size:11.5px;color:var(--ink-soft);min-width:8em}
+.rsch-table.crisis th{white-space:nowrap}
+.rsch-table.crisis td:nth-child(2),.rsch-table.crisis td:nth-child(4){font-family:var(--f-mono);font-size:11px;white-space:nowrap}
+.shots-h{margin:26px 0 0;font-size:15px}
+.rules{margin:12px 0 0;padding-left:1.2em;max-width:72ch;font-size:14px;line-height:1.75;color:var(--ink-soft)}
+.rules li{margin-bottom:8px}
+.rules b{color:var(--ink)}
