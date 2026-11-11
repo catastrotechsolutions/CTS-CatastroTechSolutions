@@ -224,6 +224,8 @@ footer{padding-block:24px 32px}
 footer p:first-child{font-size:10px;line-height:1.5;color:var(--steel);letter-spacing:0}
 footer p:first-child{font-size:9px;line-height:1.4;color:#b9bcbe;max-width:none}
 footer .wrap{flex-direction:column-reverse;align-items:flex-start;gap:10px}
+footer .footer-contact{text-transform:none;letter-spacing:.04em}
+footer .footer-contact a:hover{color:var(--signal)}
 
 .org{grid-column:1/-1;margin-top:56px}
 .org-title{margin:8px 0 28px;font-size:clamp(22px,2.4vw,30px);font-weight:900;letter-spacing:-.03em}
